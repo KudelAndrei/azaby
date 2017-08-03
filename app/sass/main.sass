@@ -1,0 +1,326 @@
+@import "fonts"
+@import "libs"
+
+*::-webkit-input-placeholder
+	color: #9e9e9e
+	opacity: 1
+
+*:-moz-placeholder
+	color: #9e9e9e
+	opacity: 1
+
+*::-moz-placeholder
+	color: #9e9e9e
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #9e9e9e
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: "RobotoRegular"
+	overflow-x: hidden
+	margin: 0
+
+.header-top
+	margin-bottom: 20px
+
+.header-top__left
+	margin: 0
+	padding: 0
+	list-style-type: none
+	margin-top: 8px
+	a
+		color: #646464
+		border-bottom: 1px dotted #969696
+		&:hover, &:focus
+			border-bottom: 1px dotted transparent
+			text-decoration: none
+	>li
+		display: inline-block
+		margin-right: 10px
+		&:last-child
+			margin-right: 0
+	.shop
+		display: inline-block
+		border-bottom: 1px dotted transparent
+		&:hover
+			border-bottom: 1px dotted #969696
+		>i
+			display: inline-block
+			vertical-align: middle
+			width: 20px
+			height: 20px
+			background: url(//s.exist.ru/img2/icons/header/map-marker.svg) no-repeat
+			background-size: contain
+			margin-bottom: 2px
+
+.header-center
+	margin-bottom: 15px
+
+.search-panel
+	position: relative
+	.search
+		float: left
+		height: 49px
+		border: 2px solid #b4c5c5
+		border-radius: 25px
+		min-width: 100%
+		font-size: 15px
+		padding: 0 55px 0 20px
+		background: #f5f5f5
+		transition: min-width, border-color, background-color, 0.3s ease
+		box-sizing: border-box
+		font-size: 16px
+		outline: none
+		&:focus
+			background-color: #fff
+	.search-btn
+		text-indent: -99999px
+		width: 40px
+		height: 49px
+		margin-left: -55px
+		background: transparent url(//s.exist.ru/img2/icons/header/search.svg) center center no-repeat
+		float: left
+		opacity: 0.8
+		border: none
+		outline: none
+		&:hover
+			opacity: 1
+
+.header-btn
+	background: #f0f1f1 url(//s.exist.ru/img2/icons-new.png) 5px -227px no-repeat
+	border-color: #CFD6D8
+	border: 2px solid #cccccc
+	margin-right: 10px
+	display: inline-block
+	padding: 14px 25px 14px 45px
+	position: relative
+	margin-bottom: 10px
+	border-radius: 2px
+	transition: background 0.3s ease
+	font-family: Arial, Tahoma, sans-serif
+	text-transform: uppercase
+	font-size: 11px
+	font-weight: bold
+	color: #6f6f6f
+	&.orders
+		background: #f0f1f1 url(//s.exist.ru/img2/icons-new.png) 5px -271px no-repeat
+		margin-right: 0
+	&:hover
+		text-decoration: none
+		color: #6f6f6f
+		background-color: #e8e8e8
+		
+.header-top__right
+	margin: 0
+	padding: 0
+	list-style-type: none
+	float: right
+	>li
+		display: inline-block
+
+.btn-registration
+	display: inline-block
+	padding: 0 15px
+	height: 35px
+	line-height: 35px
+	background: #a2a2a2
+	color: #fff
+	transition: background-color 0.2s ease
+	&:hover, &:focus
+		text-decoration: none
+		color: #fff
+		background-color: #646464
+
+.login-panel
+	display: inline-block
+	padding: 8px 15px
+	cursor: pointer
+	>i
+		float: left
+		margin-right: 8px
+		width: 15px
+		height: 18px
+		background: url(//s.exist.ru/img2/icons/header/user.svg) center center no-repeat
+		background-size: 14px
+	&:hover
+		background-color: #fafafa
+
+.header-center__right
+	float: right
+
+.header-bottom
+	clear: both
+	height: 45px
+	background: #256892
+	width: 100%
+	position: relative
+
+.menu-left
+	float: left
+	width: calc(100% - 100px)
+
+.container-menu
+	position: relative
+	width: 100%
+	clear: both
+
+.menu-btn
+	float: left
+	color: #fff
+	padding: 0 15px
+	font-size: 14px
+	line-height: 45px
+	color: #fff
+	font-family: "Intro", Arial, Tahoma, sans-serif
+	text-transform: uppercase
+	font-weight: 600
+	cursor: pointer
+	&:hover
+		background-color: #175780
+		.cataloges-toggle
+			visibility: visible
+			opacity: 1
+			pointer-events: all
+			display: block
+			max-height: 300px
+	>i
+		float: left
+		display: inline-block
+		min-width: 20px
+		height: 2px
+		background: #fff
+		margin-top: 14px
+		margin-left: 10px
+		position: relative
+		margin-top: 21px
+		margin-right: 10px
+		transition: all 0.5s ease
+		&::before, &::after
+			content: ''
+			position: absolute
+			min-width: 20px
+			height: 2px
+			background: #fff
+			transition: all .3s ease
+			transform: rotate(0deg)
+		&::before
+			top: -7px
+		&::after
+			bottom: -7px
+
+.menu
+	margin: 0
+	padding: 0
+	list-style-type: none
+	.menu__item
+		float: left
+		>a
+			color: #fff
+			padding: 0 15px
+			font-size: 14px
+			line-height: 45px
+			float: left
+			color: #fff
+			font-family: "Intro", Arial, Tahoma, sans-serif
+			text-transform: uppercase
+			font-weight: 600
+			&:hover, &:focus
+				text-decoration: none
+				background-color: #175780
+
+.garage
+	float: right
+	background-color: #af3f3f
+	color: #fff
+	padding: 0 10px
+	width: 100px
+	text-align: center
+	line-height: 45px
+	text-transform: uppercase
+	font-weight: 600
+	cursor: pointer
+	&:hover
+		background-color: #cc4848
+
+.cataloges-toggle
+	overflow: hidden
+	z-index: 50
+	box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.2)
+	background: #fff
+	position: absolute
+	border: 1px solid #e4e4e2
+	top: 45px
+	left: 0
+	width: 100%
+	visibility: hidden
+	pointer-events: none
+	color: #363636
+	text-transform: none
+	max-height: 0
+	transition: all 0.3s ease
+	font-weight: 500
+	cursor: default
+	a
+		color: #363636
+		&:hover, &:focus
+			color: #C54141
+			text-decoration: none
+	.cataloges-toggle__container
+		float: left
+		width: 100%
+	.cataloges-toggle__column
+		float: left
+		padding: 15px
+		transition: all 0.3s ease
+		flex-direction: column
+		box-sizing: border-box
+		width: 20%
+		min-width: 220px
+		min-height: 300px
+		position: relative
+	.cataloges-toggle__head
+		display: inline-block
+		font-size: 18px
+		border-bottom: 2px solid #e4e4e2
+		margin-bottom: 15px
+		line-height: 30px
+		color: #363636
+		&.cataloges-toggle__head--green
+			border-bottom: 2px solid #5fc1b6
+		&.cataloges-toggle__head--yellow
+			border-bottom: 2px solid #ffaf00
+		&.cataloges-toggle__head--purple
+			border-bottom: 2px solid #97589e
+		&.cataloges-toggle__head--red
+			border-bottom: 2px solid #f06476
+	.cataloges-toggle__list-item
+		display: block
+		font-size: 14px
+		line-height: 1.4
+		margin-bottom: 10px
+		&.cataloges-toggle__list-item--last
+			color: gray
+			margin-top: auto
+			position: absolute
+			bottom: 20px
+			&:hover
+				color: #C54141
+
+
+@import "media" // Всегда в конце
