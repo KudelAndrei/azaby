@@ -2,18 +2,109 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.menu
+		.menu__item
+			>a
+				padding: 0 12px
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.menu-left
+		position: absolute
+		visibility: hidden
+		padding: 0
+		margin: 0
+		opacity: 0
+		width: 0
+		height: 0
+		transition: opacity 0.3s ease
+		background: #fff
+		top: 45px
+		z-index: 2
+		box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.3)
+		&.active
+			opacity: 1
+			visibility: visible
+			width: 100%
+			height: auto
+			padding: 10px 0
+			z-index: 15
 
+		.menu-btn
+			display: block
+			width: 100%
+			background-color: #fff
+			color: #363636
+			padding: 0 12px
+			border-bottom: 1px solid #e4e4e2
+			&:hover, &:active, &:focus
+				background-color: #f5f5f5
+			>i
+				display: none
+			&.active
+				background-color: #f5f5f5
+				.cataloges-toggle
+					position: relative
+					left: 0 !important
+					width: 100%
+					top: 0
+					float: left
+					padding: 10px 0
+					overflow: hidden
+					border: none
+					max-height: 9999px
+					display: block
+					margin: 10px 0
+			.cataloges-toggle
+				clear: both
+				width: 100%
+				.cataloges-toggle__column
+					padding: 5px 12px
+				
+		.menu
+			.menu__item
+				float: none
+				>a
+					color: #363636
+					display: block
+					width: 100%
+					border-bottom: 1px solid #e4e4e2
+					&:hover, &:active, &:focus
+						background-color: #f5f5f5
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	.header-top__left
+		>li 
+			&:first-child
+				span
+					display: none
+			&:last-child
+				display: none
+	.header-btn
+		&.cart, &.orders
+			border-radius: 50%
+			width: 18px
+			height: 18px
+			padding: 23px
+			text-indent: 35px
+			overflow: hidden
+		&.cart
+			background-position: 3px -224px
+		&.orders
+			background-position: 1px -268px	
 
+	.select-panel
+		flex-direction: column
+		.select__item
+			width: 100%
+			.select__item-toggle
+				border-right: none
+				border-bottom: 1px solid #ccc
+			&:last-child
+				.select__item-toggle
+					border-bottom: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)

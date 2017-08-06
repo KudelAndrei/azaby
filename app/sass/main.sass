@@ -39,6 +39,10 @@ body
 .header-top
 	margin-bottom: 20px
 
+.header-top-wrap
+	display: flex
+	justify-content: space-between
+
 .header-top__left
 	margin: 0
 	padding: 0
@@ -69,17 +73,36 @@ body
 			background-size: contain
 			margin-bottom: 2px
 
+.header-top__right
+	margin: 0
+	padding: 0
+	list-style-type: none
+	>li
+		display: inline-block
+
 .header-center
 	margin-bottom: 15px
 
+.header-center-wrap
+	display: flex
+	justify-content: space-between
+
+.logo-img
+	display: block
+	max-width: 80px
+	min-width: 65px
+	>img
+		width: 100%
+
 .search-panel
 	position: relative
+	flex: 1 1 auto
+	padding: 0 15px
 	.search
-		float: left
+		width: 100%
 		height: 49px
 		border: 2px solid #b4c5c5
 		border-radius: 25px
-		min-width: 100%
 		font-size: 15px
 		padding: 0 55px 0 20px
 		background: #f5f5f5
@@ -90,12 +113,13 @@ body
 		&:focus
 			background-color: #fff
 	.search-btn
+		top: 0px
+		right: 20px
+		position: absolute
 		text-indent: -99999px
 		width: 40px
 		height: 49px
-		margin-left: -55px
 		background: transparent url(//s.exist.ru/img2/icons/header/search.svg) center center no-repeat
-		float: left
 		opacity: 0.8
 		border: none
 		outline: none
@@ -106,7 +130,7 @@ body
 	background: #f0f1f1 url(//s.exist.ru/img2/icons-new.png) 5px -227px no-repeat
 	border-color: #CFD6D8
 	border: 2px solid #cccccc
-	margin-right: 10px
+	margin-right: 15px
 	display: inline-block
 	padding: 14px 25px 14px 45px
 	position: relative
@@ -125,14 +149,7 @@ body
 		text-decoration: none
 		color: #6f6f6f
 		background-color: #e8e8e8
-		
-.header-top__right
-	margin: 0
-	padding: 0
-	list-style-type: none
-	float: right
-	>li
-		display: inline-block
+	
 
 .btn-registration
 	display: inline-block
@@ -162,7 +179,7 @@ body
 		background-color: #fafafa
 
 .header-center__right
-	float: right
+	display: flex
 
 .header-bottom
 	clear: both
@@ -172,18 +189,52 @@ body
 	position: relative
 
 .menu-left
+	position: relative
 	float: left
 	width: calc(100% - 100px)
+	z-index: 2
 
 .container-menu
 	position: relative
 	width: 100%
 	clear: both
 
+.menu-mobile
+	position: absolute
+	cursor: pointer
+	width: 100px
+	height: 45px
+	float: left
+	>i
+		float: left
+		display: inline-block
+		min-width: 20px
+		height: 2px
+		background: #fff
+		margin-top: 14px
+		margin-left: 10px
+		position: relative
+		margin-top: 21px
+		margin-right: 10px
+		transition: all 0.5s ease
+		&::before, &::after
+			content: ''
+			position: absolute
+			left: 0
+			min-width: 20px
+			height: 2px
+			background: #fff
+			transition: all .3s ease
+			transform: rotate(0deg)
+		&::before
+			top: -7px
+		&::after
+			bottom: -7px
+
 .menu-btn
 	float: left
 	color: #fff
-	padding: 0 15px
+	padding: 0 15px 0 0
 	font-size: 14px
 	line-height: 45px
 	color: #fff
@@ -191,7 +242,14 @@ body
 	text-transform: uppercase
 	font-weight: 600
 	cursor: pointer
+	border: none
+	background-color: #256892
+	text-align: left
 	&:hover
+		background-color: #175780
+	&:focus, &:active
+		outline: none
+	&.active
 		background-color: #175780
 		.cataloges-toggle
 			visibility: visible
@@ -214,6 +272,7 @@ body
 		&::before, &::after
 			content: ''
 			position: absolute
+			left: 0
 			min-width: 20px
 			height: 2px
 			background: #fff
@@ -321,6 +380,36 @@ body
 			bottom: 20px
 			&:hover
 				color: #C54141
+
+
+.select-panel
+	margin: 15px 0
+	position: relative
+	z-index: 1
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: center
+	border-radius: 3px
+	border: 1px solid #c8ccd9
+	background-color: #fff
+.select__item
+	flex: 1 1 auto
+	padding: 2px
+	&:last-child
+		.select__item-toggle
+			border-right: 0
+	.select__item-toggle
+		width: 100%
+		padding: 10px
+		transition: background-color 0.2s 
+		border: none
+		border-right: 1px solid #ccc
+		outline: none
+		&:hover
+			background-color: #fcfcfc
+			cursor: pointer
+
 
 
 @import "media" // Всегда в конце
